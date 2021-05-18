@@ -1,36 +1,36 @@
 class TimeInfo {
-  String abbreviation;
-  String clientIp;
-  String datetime;
-  int dayOfWeek;
-  int dayOfYear;
-  bool dst;
+  String? abbreviation;
+  String? clientIp;
+  String? datetime;
+  int? dayOfWeek;
+  int? dayOfYear;
+  bool? dst;
   Null dstFrom;
-  int dstOffset;
+  int? dstOffset;
   Null dstUntil;
-  int rawOffset;
-  String timezone;
-  int unixtime;
-  String utcDatetime;
-  String utcOffset;
-  int weekNumber;
+  int? rawOffset;
+  String? timezone;
+  int? unixtime;
+  String? utcDatetime;
+  String? utcOffset;
+  int? weekNumber;
 
   TimeInfo(
       {this.abbreviation,
-        this.clientIp,
-        this.datetime,
-        this.dayOfWeek,
-        this.dayOfYear,
-        this.dst,
-        this.dstFrom,
-        this.dstOffset,
-        this.dstUntil,
-        this.rawOffset,
-        this.timezone,
-        this.unixtime,
-        this.utcDatetime,
-        this.utcOffset,
-        this.weekNumber});
+      this.clientIp,
+      this.datetime,
+      this.dayOfWeek,
+      this.dayOfYear,
+      this.dst,
+      this.dstFrom,
+      this.dstOffset,
+      this.dstUntil,
+      this.rawOffset,
+      this.timezone,
+      this.unixtime,
+      this.utcDatetime,
+      this.utcOffset,
+      this.weekNumber});
 
   TimeInfo.fromJson(Map<String, dynamic> json) {
     abbreviation = json['abbreviation'];
