@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_worldtime_clock/presentation/widgets/clock_container.dart';
+import 'package:flutter_worldtime_clock/presentation/widgets/clock_hands.dart';
 
 class ClockPage extends StatefulWidget {
   @override
@@ -30,7 +32,11 @@ class _State extends State<ClockPage> {
           Container(
             child: Column(
               children: [
-                Text("ClockContainer"),
+                ClockContainer(
+                  child: CustomPaint(
+                    painter: ClockHands(DateTime.now()),
+                  ),
+                ),
                 SizedBox(height: 20.0),
                 Text(
                   "Asia/Japan",
