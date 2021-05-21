@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'presentation/pages/clock_page.dart';
 import 'res/constants.dart';
+import 'res/routes.dart';
 
 void main() {
   runApp(ProviderScope(child: App()));
@@ -19,7 +20,8 @@ class App extends StatelessWidget {
         primarySwatch: Colors.pink,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: ClockPage()
+      home: ClockPage(),
+      onGenerateRoute: AppRoutes.onGenerateRoute,
     );
   }
 }
