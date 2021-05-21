@@ -1,3 +1,6 @@
+import 'package:equatable/equatable.dart';
+import 'package:flutter_worldtime_clock/presentation/pages/clock_page.dart';
+
 class TimeInfo {
   String? abbreviation;
   String? clientIp;
@@ -5,9 +8,9 @@ class TimeInfo {
   int? dayOfWeek;
   int? dayOfYear;
   bool? dst;
-  Null dstFrom;
+  String? dstFrom;
   int? dstOffset;
-  Null dstUntil;
+  String? dstUntil;
   int? rawOffset;
   String? timezone;
   int? unixtime;
@@ -69,4 +72,7 @@ class TimeInfo {
     data['week_number'] = this.weekNumber;
     return data;
   }
+
+  @override
+  List<String?> get props => [abbreviation, timezone];
 }
