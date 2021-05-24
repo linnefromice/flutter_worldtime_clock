@@ -3,11 +3,10 @@ import 'package:state_notifier/state_notifier.dart';
 
 class TimezoneNotifier extends StateNotifier<List<String>> {
   TimezoneNotifier() : super([]) {
-    state = [];
     _init();
   }
 
-  void _init() async {
+  Future<void> _init() async {
     state = await WorldTimeApi.getTimeZones() ?? [];
   }
 }

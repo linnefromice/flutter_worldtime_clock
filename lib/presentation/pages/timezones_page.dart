@@ -27,7 +27,7 @@ class _State extends State<TimezonesPage> {
         padding: EdgeInsets.all(16.0),
         child: Consumer(
           builder: (context, watch, child) {
-            final timezones = watch(timezonesProvider).state;
+            final timezones = watch(timezonesProvider);
             final provider = watch(clocksProvider);
             if (timezones != null) {
               return Column(
